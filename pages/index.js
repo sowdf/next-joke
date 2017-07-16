@@ -4,7 +4,7 @@ import fetch from 'isomorphic-fetch';
 
 export default class extends React.Component{
     static async getInitialProps({req}){
-        const res = await fetch('http://localhost:3001/api/joke-cold?page=1');
+        const res = await fetch('http://120.24.169.84:3001/api/joke-cold?page=1');
         const json = await res.json();
         let {code,message,result:{list}} = json;
         return {list : list}
